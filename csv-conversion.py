@@ -1,4 +1,3 @@
-
 #!python3.6
 import pandas as pd
 import csv
@@ -40,3 +39,4 @@ for file in file_names:
 		x += 1
 
 	data.to_csv('./data/{}.csv'.format(file), sep=',', index=None)
+	
