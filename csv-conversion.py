@@ -3,6 +3,10 @@ import pandas as pd
 import csv
 import re
 
+# A handy script to convert the text files in directory ./txt-files/
+# in the format given by running .ics files through https://icsconvert.appspot.com/
+# to csv files in ./data/ with format: Summary,Start,End
+
 file_names = ['exams', 'exercise', 'general', 'necessities', 'social', 'work']
 
 for file in file_names:
