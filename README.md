@@ -1,4 +1,4 @@
-# Tracking-Time
+# ticktock
 
 ### Notes
 For the sanity of future me:
