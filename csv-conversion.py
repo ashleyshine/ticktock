@@ -42,5 +42,6 @@ for file in file_names:
 			data = data.append(row, ignore_index=True)
 		x += 1
 
+	print("Writing to ./data/{}.csv".format(file))
 	data.to_csv('./data/{}.csv'.format(file), sep=',', index=None)
 	
