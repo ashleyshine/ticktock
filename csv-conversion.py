@@ -7,7 +7,7 @@ import re
 # in the format given by running .ics files through https://icsconvert.appspot.com/
 # to csv files in ./data/ with format: Summary,Start,End
 
-file_names = ['exams', 'exercise', 'general', 'necessities', 'social', 'work']
+file_names = ['exercise', 'general', 'social', 'work']
 
 for file in file_names:
 	with open('./txt-files/{}.txt'.format(file), encoding='utf-8') as f:
