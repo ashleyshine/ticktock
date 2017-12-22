@@ -1,5 +1,7 @@
 # ticktock
 
+Answering the question: *how did I spend my time in Fall Quarter 2017?*
+
 ### Notes
 For the sanity of future me:
 * Export google calendars to .ics files and convert them to text files using https://icsconvert.appspot.com/
