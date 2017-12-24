@@ -9,6 +9,13 @@ import re
 
 file_names = ['exercise', 'general', 'social', 'work']
 
+def parse_line(line):
+	mo = re.match(r"(\w+):\s*(.*)", line)
+	if mo:
+		return [mo.group(1), mo.group(2)]
+	else:
+		return ['', '']
+
 for file in file_names:
 	with open('./txt-files/{}.txt'.format(file), encoding='utf-8') as f:
 		lines = f.readlines()
@@ -16,13 +23,6 @@ for file in file_names:
 	lines = [x.strip() for x in lines]
 
 	data = pd.DataFrame(columns=['Summary', 'Start', 'End'])
-
-	def parse_line(line):
-		mo = re.match(r"(\w+):\s*(.*)", line)
-		if mo:
-			return [mo.group(1), mo.group(2)]
-		else:
-			return ['', '']
 
 	x = 0
 	while x < (len(lines)):
