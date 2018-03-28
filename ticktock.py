@@ -130,7 +130,20 @@ def is_mock_related(event):
     Params:
         event: string holding event description
     """
-    regex_str = r".*(Mock|MT|Invitational|Tournament|Direct|Equal).*"
+    regex_str = r".*(Mock|MT|Invitational|Tournament|Regionals|ORCS|Direct|Equal).*"
+    mo = re.search(regex_str, event, re.IGNORECASE)
+    if mo:
+        return True
+    return False
+
+
+def is_tournament(event):
+    """
+    Return True if an event is a tournament related, False otherwise.
+    Params:
+        event: string holding event description
+    """
+    regex_str = r".*(Invitational|Tournament|Regionals|ORCS).*"
     mo = re.search(regex_str, event, re.IGNORECASE)
     if mo:
         return True
